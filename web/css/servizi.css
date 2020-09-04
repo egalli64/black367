@@ -3,3 +3,24 @@
     padding-top: 15px;
     padding-bottom: 15px;
 }
+
+ul {
+    margin: 50px;
+    padding: 20px;
+    line-height: 300%;
+  }
+  .back {
+    margin: 10px;
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.75em;
+    font-size: 16px;
+    background-color: #222;
+    color: #aaa;
+  }
+  
+  .reparto {
+    margin-bottom: 50px;
+}

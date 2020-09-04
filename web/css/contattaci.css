@@ -1,0 +1,17 @@
+.form {
+    margin-left: 5px;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.75em;
+	font-size: 16px;
+	background-color: #222;
+	color: #aaa;
+}
+
+#infotext{
+    text-align: justify;
+    margin-left: 5px;
+    margin-right: 5px;
+}

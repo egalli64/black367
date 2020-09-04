@@ -1,4 +1,8 @@
-#ext-container {
+#login-container {
+    padding: 20px;
+}
+
+#registration-container {
     padding: 20px;
 }
 
@@ -17,4 +21,20 @@
 .labels {
     margin-top: 12px;
     margin-bottom: 5px;
+}
+
+#check-admin-label {
+    margin: 0px;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.75em;
+	font-size: 16px;
+	background-color: #222;
+	color: #aaa;
+}
+
+#check-admin {
+    margin-left: 5px;
 }

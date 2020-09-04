@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/login.js" defer> </script>
+
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        @import url(./css/login.css);
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container-fluid top">
+        <div class="row">
+            <div class="col-sm-1 col-md-2 col-lg-4"></div>
+
+            <div class="col-sm-10 col-md-8 col-lg-4" id="ext-container">
+                <form id="login" class="needs-validation" novalidate>  <!-- action="localhost:8080/federico/blank.html" -->
+                    <div class="form-row">
+                        <div class="col">
+                            <h2 id="autentication">AUTENTICATION</h2>
+                            <label for="usr" class="labels">Username</label>
+                            <input type="text" class="form-control" id="usr" placeholder="Username" required>
+                            <div class="invalid-feedback">
+                                Please enter a username.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="psw" class="labels">Password</label>
+                            <input type="password" id="psw" class="form-control" aria-describedby="passwordHelpBlock"
+                                placeholder="Password" required>
+                            <div class="invalid-feedback">
+                                Enter a valid password.
+                            </div>
+                            <small id="passwordHelpBlock" class="form-text text-muted">
+                                The password must be at least 8 characters long, contain at least one number, one
+                                lowercase and one uppercase characters.
+                            </small>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">LOGIN</button>
+                </form>
+            </div>
+
+            <div class="col-sm-1 col-md-2 col-lg-4"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -31,13 +31,48 @@
 
     <div class="container-fluid top">
         <div class="row">
-            <div class="col"></div>
+            <div class="col">
+                <div>
+                    <a href="index.html"><button class="btn btn-primary btn-header" type="button">Home</button></a>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <a href="ospedali.html"><button class="btn btn-primary btn-header"
+                            type="button">Strutture</button></a>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <a href="servizi.html"><button class="btn btn-primary btn-header" type="button">Servizi</button></a>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <a href="medici.html"><button class="btn btn-primary btn-header" type="button">Medici</button></a>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <a href="contattaci.html"><button class="btn btn-primary btn-header"
+                            type="button">Contattaci</button></a>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <a href="login.html"><button class="btn btn-primary btn-header" type="button">Login</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1"></div>
 
             <div class="col" id="login-container">
                 <form id="login" class="needs-validation" action="index_bis.html" target="_self" novalidate>
                     <div class="form-row">
                         <div class="col">
-                            <h2 id="autentication">AUTENTICAZIONE</h2>
+                            <h2 id="autentication">ACCEDI</h2>
                             <label for="usr" class="labels">Username</label>
                             <input type="text" class="form-control" id="usr" placeholder="Username" required>
                             <div class="invalid-feedback">
@@ -61,6 +96,11 @@
                     </div>
                     <div class="form-row">
                         <div class="col">
+                            <!--                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+                              </div>
+-->
                             <br>
                             <small class="form-text text-muted">
                                 Si vuole effettuare l'accesso come amministratori del sito?
@@ -74,16 +114,111 @@
 
                     <button class="btn btn-primary" type="submit">LOGIN</button>
                 </form>
-
-                <div>
-                    <p>
-                        Torna alla <a href="index.html">home</a>
-                    </p>
-                </div>
             </div>
 
-            <div class="col" id="registration-container"></div>
-            <div class="col"></div>
+            <div class="col" id="registration-container">
+                <form id="registration" class="needs-validation" action="index_bis.html" target="_self" novalidate>
+                    <div class="form-row">
+                        <div class="col">
+                            <h2 id="autentication">REGISTRATI</h2>
+                            <label for="nome" class="labels">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Nome" required>
+                            <div class="invalid-feedback">
+                                Campo necessario
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="cognome" class="labels">Cognome</label>
+                            <input type="text" class="form-control" id="cognome" placeholder="Cognome" required>
+                            <div class="invalid-feedback">
+                                Campo necessario
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="data" class="labels">Data di nascita</label>
+                            <input type="date" class="form-control" id="data" placeholder="03/12/1993" required>
+                            <div class="invalid-feedback">
+                                Campo necessario
+                            </div>
+                        </div>
+                        <div class="col" id="sesso-div">
+                            <label for="sesso" class="labels">Sesso</label>
+                            <div id="sesso">
+                                <input type="radio" name="sesso" id="sesso-m" required>
+                                <label for="sesso-m" class="labels">M</label>
+                                <input type="radio" name="sesso" id="sesso-f" required>
+                                <label for="sesso-f" class="labels">F</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="indirizzo" class="labels">Indirizzo</label>
+                            <input type="text" class="form-control" id="indirizzo" placeholder="Via Roma 1" required>
+                            <div class="invalid-feedback">
+                                Campo necessario
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="cap" class="labels">CAP</label>
+                            <input type="text" class="form-control" id="cap" placeholder="40100" required>
+                            <div class="invalid-feedback">
+                                Campo necessario
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="citta" class="labels">Città</label>
+                            <input type="text" class="form-control" id="citta" placeholder="Bologna" required>
+                            <div class="invalid-feedback">
+                                Campo necessario
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <!--    inserire form control per email     -->
+                        <div class="col">
+                            <label for="email" class="labels">E-mail</label>
+                            <input type="email" class="form-control" id="email" placeholder="mario.rossi@gmail.com"
+                                required>
+                            <div class="invalid-feedback">
+                                Inserire una email valida.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="usr-reg" class="labels">Username</label>
+                            <input type="text" class="form-control" id="usr-reg" placeholder="Username" required>
+                            <div class="invalid-feedback">
+                                Per favore, inserire uno username.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <label for="psw-reg" class="labels">Password</label>
+                            <input type="password" id="psw-reg" class="form-control" aria-describedby="passwordHelpBlock"
+                                placeholder="Password" required>
+                            <div class="invalid-feedback">
+                                Inserire una password valida.
+                            </div>
+                            <small id="passwordHelpBlock" class="form-text text-muted">
+                                La password deve essere lunga almeno 8 caratteri, contenere almeno un numero, un
+                                carattere minuscolo e un carattere maiuscolo.
+                            </small>
+                        </div>
+                    </div>
+                    
+
+                    <button class="btn btn-primary" type="submit">REGISTRATI</button>
+                </form>
+            </div>
+
+            <div class="col-1"></div>
         </div>
     </div>
 

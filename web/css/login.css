@@ -14,6 +14,10 @@
     margin-top: 10px;
 }
 
+.btn-header {
+    width: 100%;
+}
+
 .borderRed {
     border: 2px red solid;
 }
@@ -37,4 +41,8 @@ body {
 
 #check-admin {
     margin-left: 5px;
+}
+
+#sesso, #sesso-div {
+    text-align: center;
 }

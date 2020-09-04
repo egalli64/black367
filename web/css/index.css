@@ -128,3 +128,10 @@ aside,
 #carouselExampleCaptions {
     margin: 20px;
 }
+
+#box-logout {
+    border: 2px rgb(30, 67, 255) solid;
+    padding: 20px;
+    margin-right: 15%;
+    text-align: justify;
+}

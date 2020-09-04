@@ -31,9 +31,9 @@
 
     <div class="container-fluid top">
         <div class="row">
-            <div class="col-sm-1 col-md-2 col-lg-4"></div>
+            <div class="col"></div>
 
-            <div class="col-sm-10 col-md-8 col-lg-4" id="ext-container">
+            <div class="col" id="login-container">
                 <form id="login" class="needs-validation" action="index_bis.html" target="_self" novalidate>
                     <div class="form-row">
                         <div class="col">
@@ -64,11 +64,11 @@
                             <br>
                             <small class="form-text text-muted">
                                 Si vuole effettuare l'accesso come amministratori del sito?
+                                <slope>
+                                    <input type="checkbox" id="check-admin" value="Si">
+                                    <label for="check-admin" id="check-admin-label" class="labels">Si</label>
+                                </slope>
                             </small>
-                            <input type="checkbox" id="check-si" value="Si">
-                            <label for="check-si" id="check-si-label" class="labels">Si</label>
-                            <input type="checkbox" id="check-no" value="No" checked>
-                            <label for="check-no" id="check-no-label" class="labels">No</label>
                         </div>
                     </div>
 
@@ -82,7 +82,8 @@
                 </div>
             </div>
 
-            <div class="col-sm-1 col-md-2 col-lg-4"></div>
+            <div class="col" id="registration-container"></div>
+            <div class="col"></div>
         </div>
     </div>
 

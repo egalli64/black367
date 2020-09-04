@@ -5,6 +5,9 @@ let usr = document.getElementById('usr');
 let usrFlag = true;
 let pswFlag = true;
 
+let check = document.getElementById('check-admin');
+let adminFlag = false;
+
 function isUsernameValid() {
     if (usr.value.length > 0) {
         return true;
@@ -12,6 +15,12 @@ function isUsernameValid() {
         return false;
     }
 };
+
+function isAdmin() {
+    if ((usr.value == adminUsr)&&(psw.value == adminPsw)) {
+        return true;
+    }
+}
 
 function isPasswordValid() {
     if (psw.value.length < 8) {
@@ -69,7 +78,6 @@ psw.oninput = () => {
 
 form.onsubmit = () => {
     if (isUsernameValid() && isPasswordValid()) {
-        window.open("/federico/blank.html");
         return true;
     } else if (isUsernameValid()) {
         console.log('Field "PASSWORD" is wrong! \n Submit aborted');

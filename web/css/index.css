@@ -5,3 +5,20 @@ body>.header {
 .btn {
     margin: 10px;
 }
+
+.carousel-item {
+    width: 100%;
+    height: 400px;
+}
+
+.carousel-text {
+    color: black;
+}
+
+#home-central-box {
+    text-align: justify;
+}
+
+#home-left-box {
+    text-align: right;
+}

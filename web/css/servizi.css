@@ -12,4 +12,12 @@ ul {
   .back {
     margin: 10px;
   }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.75em;
+    font-size: 16px;
+    background-color: #222;
+    color: #aaa;
+  }
   

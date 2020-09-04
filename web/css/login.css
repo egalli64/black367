@@ -18,3 +18,7 @@
     margin-top: 12px;
     margin-bottom: 5px;
 }
+
+#check-si-label, #check-no-label {
+    margin: 0px;
+}

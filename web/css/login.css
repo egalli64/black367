@@ -1,0 +1,20 @@
+#ext-container {
+    padding: 20px;
+}
+
+#autentication {
+    text-align: center;
+}
+
+.btn {
+    margin-top: 10px;
+}
+
+.borderRed {
+    border: 2px red solid;
+}
+
+.labels {
+    margin-top: 12px;
+    margin-bottom: 5px;
+}

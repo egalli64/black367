@@ -113,6 +113,10 @@ aside,
     text-align: right;
 }
 
+#home-central-box {
+    text-align: justify;
+}
+
 .header {
     text-align: center;
 }

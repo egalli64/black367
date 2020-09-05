@@ -13,5 +13,9 @@ body {
 #infotext{
     text-align: justify;
     margin-left: 5px;
-    margin-right: 5px;
+	margin-right: 5px;
+}
+
+.btn-header {
+	width: 100%;
 }

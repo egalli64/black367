@@ -5,7 +5,7 @@
 }
 
 ul {
-    margin: 50px;
+    margin: 20px;
     padding: 20px;
     line-height: 300%;
   }
@@ -21,3 +21,10 @@ ul {
     color: #aaa;
   }
   
+  .reparto {
+    margin-bottom: 50px;
+}
+
+.btn-header {
+  width: 100%;
+}

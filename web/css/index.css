@@ -119,12 +119,30 @@ aside,
 
 .header {
     text-align: center;
+    font-size: 50px;
 }
 
 .btn {
     margin: 10px;
 }
 
+.btn-side {
+    width: 100%;
+}
+
 #carouselExampleCaptions {
     margin: 20px;
+}
+
+#box-logout {
+    width: 100%;
+    border: 2px rgb(30, 67, 255) solid;
+    background-color: rgb(29, 29, 62);
+    padding: 20px;
+    margin-right: 15%;
+    text-align: justify;
+}
+
+#header-box {
+    text-align: center;
 }

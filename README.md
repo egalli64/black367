@@ -28,8 +28,7 @@
 1. Federico
 1. Nicole
 1. Maria Grazia
-1. ...
 
-## Git
+## Release manager
 1. Federico
 1. ...

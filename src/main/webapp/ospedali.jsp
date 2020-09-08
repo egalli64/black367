@@ -29,35 +29,36 @@
 <body>
 
 	<%@include file="header.html"%>
-	<div class="container-fluid">
-		<h1>Ospedali Toscana Nord-Ovest</h1>
-	</div>
-	<div class="row">
-		<ul>
-			<li class="città">Massa-Carrara:
-				<ul>
-					<li class="ospedali">Ospedale delle Apuane</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
+	<div>
+		<div class="container-fluid">
+			<h1>Ospedali Toscana Nord-Ovest</h1>
+		</div>
+		<div class="row">
+			<ul>
+				<li class="città">Massa-Carrara:
+					<ul>
+						<li class="ospedali">Ospedale delle Apuane</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
 
-	<div class="col">
-		<p>
-			Il nuovo <a
-				href="https://www.uslnordovest.toscana.it/index.php/ospedali/35-civile-delle-apuane-massa">Ospedale
-				delle Apuane </a>è uno dei 4 nuovi grandi ospedali della Toscana, costruito all'insegna
-			dell'efficacia, funzionalità, comfort e sicurezza con la formula del project financing. È
-			realizzato secondo i più avanzati criteri di edilizia ospedaliera, con materiali di primissima
-			qualità e accorgimenti tecnici all'avanguardia. È una struttura organizzata per intensità di
-			cura, per offrire risposte personalizzate ai diversi bisogni di cura e assistenza del paziente, e
-			studiata per affrontare patologie acute e complesse. L'alta tecnologia della diagnostica e delle
-			terapie contribuiranno ad assicurare una sempre maggiore qualità delle cure".
-		</p>
-	</div>
-	<div class="col">
-		<img src="pictures/ospedaleapuane.jpg" width="60%">
-	</div>
+		<div class="col">
+			<p>
+				Il nuovo <a
+					href="https://www.uslnordovest.toscana.it/index.php/ospedali/35-civile-delle-apuane-massa">Ospedale
+					delle Apuane </a>è uno dei 4 nuovi grandi ospedali della Toscana, costruito all'insegna
+				dell'efficacia, funzionalità, comfort e sicurezza con la formula del project financing. È
+				realizzato secondo i più avanzati criteri di edilizia ospedaliera, con materiali di primissima
+				qualità e accorgimenti tecnici all'avanguardia. È una struttura organizzata per intensità di
+				cura, per offrire risposte personalizzate ai diversi bisogni di cura e assistenza del paziente,
+				e studiata per affrontare patologie acute e complesse. L'alta tecnologia della diagnostica e
+				delle terapie contribuiranno ad assicurare una sempre maggiore qualità delle cure".
+			</p>
+		</div>
+		<div class="col">
+			<img src="pictures/ospedaleapuane.jpg" width="60%">
+		</div>
 	</div>
 
 	<div class="row">

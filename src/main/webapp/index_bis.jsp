@@ -50,16 +50,16 @@
 
 		<div class="col-3" id="home-left-box">
 			<div>
-				<a href="ospedali.html"><button class="btn btn-primary btn-side" type="button">STRUTTURE</button></a>
+				<a href="ospedali.jsp"><button class="btn btn-primary btn-side" type="button">STRUTTURE</button></a>
 			</div>
 			<div>
-				<a href="servizi.html"><button class="btn btn-primary btn-side" type="button">SERVIZI</button></a>
+				<a href="servizi.jsp"><button class="btn btn-primary btn-side" type="button">SERVIZI</button></a>
 			</div>
 			<div>
-				<a href="medici.html"><button class="btn btn-primary btn-side" type="button">MEDICI</button></a>
+				<a href="medici.jsp"><button class="btn btn-primary btn-side" type="button">MEDICI</button></a>
 			</div>
 			<div>
-				<a href="contattaci.html"><button class="btn btn-primary btn-side" type="button">CONTATTACI</button></a>
+				<a href="contattaci.jsp"><button class="btn btn-primary btn-side" type="button">CONTATTACI</button></a>
 			</div>
 		</div>
 
@@ -79,8 +79,8 @@
 		<div class="col-3">
 			<div>
 				<div id="box-logout">
-					<p>Benvenuto nella tua area personale!</p>
-					<a href="index.html"><button class="btn btn-primary" type="button">LOGOUT</button></a>
+					<p>Ciao ${user}! Benvenuto nella tua area personale!</p>
+					<a href="index.jsp"><button class="btn btn-primary" type="button" action="/black367/logout">LOGOUT</button></a>
 				</div>
 			</div>
 		</div>

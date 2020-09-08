@@ -1,8 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-<title>Login</title>
+<meta charset="UTF-8">
+<title>Accedi o registrati</title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -20,9 +21,7 @@
 	integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 	crossorigin="anonymous"></script>
 
-<!--
-		<script type="text/javascript" src="js/login.js" defer></script>
- -->
+<!--	<script type="text/javascript" src="js/login.js" defer></script>	 -->
 
 
 <style type="text/css">
@@ -33,18 +32,16 @@
 @import url(./css/login.css);
 </style>
 </head>
-
-
 <body>
+	<%@ include file="header.html"%>
 
 	<div class="container-fluid top">
 		<div class="row">
 			<div class="col-1"></div>
 
 			<div class="col" id="login-container">
-				<form id="login" class="needs-validation" action="/login"
-					novalidate>
-					<!-- target="_self" -->
+				<form id="login" class="needs-validation" action="/black367/login" novalidate>
+				<!-- target="_self" -->
 					<div class="form-row">
 						<div class="col">
 							<h2 id="autentication">ACCEDI</h2>
@@ -85,7 +82,7 @@
 			</div>
 
 			<div class="col" id="registration-container">
-				<form id="registration" class="needs-validation" action="index_bis.html"
+				<form id="registration" class="needs-validation" action="/black367/index_bis.jps"
 					target="_self" novalidate>
 					<div class="form-row">
 						<div class="col">
@@ -170,6 +167,6 @@
 		</div>
 	</div>
 
-</body>
 
+</body>
 </html>

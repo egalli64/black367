@@ -1,7 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
-
 <head>
+<meta charset="utf-8">
 <title>Chi siamo</title>
 
 <meta charset="utf-8">
@@ -26,13 +28,14 @@
 
 <style type="text/css">
 @import url(./css/contattaci.css);
+
+@import url(./css/header.css);
 </style>
-
 </head>
-
 <body>
-
+<%@ include file="header.html" %>
 	<div class="container-fluid top">
+
 		<h1 align="center">
 			<b>Chi siamo</b>
 		</h1>
@@ -126,8 +129,6 @@
 	</div>
 
 	<br>
-	<a id="callHome" href="index.html">Torna alla Home</a>
-	<br>
+	<a id="callHome" href="index.jsp">Torna alla Home</a>
 </body>
-
 </html>

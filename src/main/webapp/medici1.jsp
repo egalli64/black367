@@ -42,10 +42,10 @@
     <table class="table table-dark">
         <thead>
             <tr>
-                <th>Cognome</th>
-                <th>Nome</th>
-                <th>Struttura ospedaliera</th>
-                <th>Email</th>
+                <th class="text-center">Cognome</th>
+                <th class="text-center">Nome</th>
+                <th class="text-center">Struttura ospedaliera</th>
+                <th class="text-center">Email</th>
             </tr>
         </thead>
         <tbody>
@@ -81,10 +81,10 @@
     <table class="table table-dark">
         <thead>
             <tr>
-                <th>Cognome</th>
-                <th>Nome</th>
-                <th>Struttura ospedaliera</th>
-                <th>Email</th>
+                <th class="text-center">Cognome</th>
+                <th class="text-center">Nome</th>
+                <th class="text-center">Struttura ospedaliera</th>
+                <th class="text-center">Email</th>
             </tr>
         </thead>
         <tbody>
@@ -121,10 +121,10 @@
     <table class="table table-dark">
         <thead>
             <tr>
-                <th>Cognome</th>
-                <th>Nome</th>
-                <th>Struttura ospedaliera</th>
-                <th>Email</th>
+                <th class="text-center">Cognome</th>
+                <th class="text-center">Nome</th>
+                <th class="text-center">Struttura ospedaliera</th>
+                <th class="text-center">Email</th>
             </tr>
         </thead>
         <tbody>
@@ -155,10 +155,10 @@
     <table class="table table-dark">
         <thead>
             <tr>
-                <th>Cognome</th>
-                <th>Nome</th>
-                <th>Struttura ospedaliera</th>
-                <th>Email</th>
+                <th class="text-center">Cognome</th>
+                <th class="text-center">Nome</th>
+                <th class="text-center">Struttura ospedaliera</th>
+                <th class="text-center">Email</th>
             </tr>
         </thead>
         <tbody>
@@ -189,10 +189,10 @@
     <table class="table table-dark">
         <thead>
             <tr>
-                <th>Cognome</th>
-                <th>Nome</th>
-                <th>Struttura ospedaliera</th>
-                <th>Email</th>
+                <th class="text-center">Cognome</th>
+                <th class="text-center">Nome</th>
+                <th class="text-center">Struttura ospedaliera</th>
+                <th class="text-center">Email</th>
             </tr>
         </thead>
         <tbody>
@@ -217,10 +217,10 @@
     <table class="table table-dark">
         <thead>
             <tr>
-                <th>Cognome</th>
-                <th>Nome</th>
-                <th>Struttura ospedaliera</th>
-                <th>Email</th>
+                <th class="text-center">Cognome</th>
+                <th class="text-center">Nome</th>
+                <th class="text-center">Struttura ospedaliera</th>
+                <th class="text-center">Email</th>
             </tr>
         </thead>
         <tbody>
@@ -251,10 +251,10 @@
     <table class="table table-dark">
         <thead>
             <tr>
-                <th>Cognome</th>
-                <th>Nome</th>
-                <th>Struttura ospedaliera</th>
-                <th>Email</th>
+                <th class="text-center">Cognome</th>
+                <th class="text-center">Nome</th>
+                <th class="text-center">Struttura ospedaliera</th>
+                <th class="text-center">Email</th>
             </tr>
         </thead>
         <tbody>
@@ -292,10 +292,10 @@
     <table class="table table-dark">
         <thead>
             <tr>
-                <th>Cognome</th>
-                <th>Nome</th>
-                <th>Struttura ospedaliera</th>
-                <th>Email</th>
+                <th class="text-center">Cognome</th>
+                <th class="text-center">Nome</th>
+                <th class="text-center">Struttura ospedaliera</th>
+                <th class="text-center">Email</th>
             </tr>
         </thead>
         <tbody>
@@ -332,10 +332,10 @@
     <table class="table table-dark">
         <thead>
             <tr>
-                <th>Cognome</th>
-                <th>Nome</th>
-                <th>Struttura ospedaliera</th>
-                <th>Email</th>
+                <th class="text-center">Cognome</th>
+                <th class="text-center">Nome</th>
+                <th class="text-center">Struttura ospedaliera</th>
+                <th class="text-center">Email</th>
             </tr>
         </thead>
         <tbody>
@@ -365,10 +365,10 @@
     <table class="table table-dark">
         <thead>
             <tr>
-                <th>Cognome</th>
-                <th>Nome</th>
-                <th>Struttura ospedaliera</th>
-                <th>Email</th>
+                <th class="text-center">Cognome</th>
+                <th class="text-center">Nome</th>
+                <th class="text-center">Struttura ospedaliera</th>
+                <th class="text-center">Email</th>
             </tr>
         </thead>
         <tbody>
@@ -399,10 +399,10 @@
     <table class="table table-dark">
         <thead>
             <tr>
-                <th>Cognome</th>
-                <th>Nome</th>
-                <th>Struttura ospedaliera</th>
-                <th>Email</th>
+                <th class="text-center">Cognome</th>
+                <th class="text-center">Nome</th>
+                <th class="text-center">Struttura ospedaliera</th>
+                <th class="text-center">Email</th>
             </tr>
         </thead>
         <tbody>
@@ -439,10 +439,10 @@
     <table class="table table-dark">
         <thead>
             <tr>
-                <th>Cognome</th>
-                <th>Nome</th>
-                <th>Struttura ospedaliera</th>
-                <th>Email</th>
+                <th class="text-center">Cognome</th>
+                <th class="text-center">Nome</th>
+                <th class="text-center">Struttura ospedaliera</th>
+                <th class="text-center">Email</th>
             </tr>
         </thead>
         <tbody>
@@ -473,10 +473,10 @@
     <table class="table table-dark">
         <thead>
             <tr>
-                <th>Cognome</th>
-                <th>Nome</th>
-                <th>Struttura ospedaliera</th>
-                <th>Email</th>
+                <th class="text-center">Cognome</th>
+                <th class="text-center">Nome</th>
+                <th class="text-center">Struttura ospedaliera</th>
+                <th class="text-center">Email</th>
             </tr>
         </thead>
         <tbody>

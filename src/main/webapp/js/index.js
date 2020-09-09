@@ -67,11 +67,7 @@ psw.oninput = () => {
     }
 };
 
-form.onsubmit = () => {
-    if (isUsernameValid() && isPasswordValid()) {
-        window.open("/federico/blank.html");
-        return true;
-    } else if (isUsernameValid()) {
+/*form.onsubmit = () => {if (isUsernameValid()) {
         console.log('Field "PASSWORD" is wrong! \n Submit aborted');
         return false;
     } else if (isPasswordValid()) {
@@ -81,4 +77,4 @@ form.onsubmit = () => {
         console.log('Both "USERNAME" and "PASSWORD" are wrong! \n Submit aborted');
         return false;
     }
-};
+};*/

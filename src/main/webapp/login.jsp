@@ -40,7 +40,7 @@
 			<div class="col-1"></div>
 
 			<div class="col" id="login-container">
-				<form id="login" class="needs-validation" action="/black367/login" novalidate>
+				<form id="login" class="needs-validation" action="/black367/login"> <!--  novalidate ?! -->
 				<!-- target="_self" -->
 					<div class="form-row">
 						<div class="col">

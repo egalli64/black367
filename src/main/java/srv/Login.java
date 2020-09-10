@@ -1,7 +1,7 @@
 package srv;
 
 import java.io.IOException;
-import java.time.LocalTime;
+//import java.time.LocalTime;
 
 import javax.annotation.Resource;
 import javax.servlet.RequestDispatcher;
@@ -34,15 +34,14 @@ public class Login extends HttpServlet {
 		String password = request.getParameter("password");
 
 		try (UserDAO dao = new UserDAO(ds)) {
-			request.setAttribute("user", dao.getAll());
 
 			if (dao.verify(user, password) != null) {
 				LOG.info("User " + user + " IS in the database");
-				request.setAttribute("user", dao.verify(user,password));
+				request.setAttribute("user", user);
 				HttpSession session = request.getSession();
 				session.setAttribute("user", user);
 				session.setAttribute("logged", true);
-				LocalTime start = (LocalTime) session.getAttribute("start");
+//				LocalTime start = (LocalTime) session.getAttribute("start");
 				RequestDispatcher rd = request.getRequestDispatcher("/index_bis.jsp");
 				rd.forward(request, response);
 			} else {
@@ -50,6 +49,9 @@ public class Login extends HttpServlet {
 				RequestDispatcher rd = request.getRequestDispatcher("/login.jsp");
 				rd.forward(request, response);
 			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 

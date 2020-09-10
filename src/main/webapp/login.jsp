@@ -104,7 +104,7 @@
 									<label class="control-label" for="citta">Città</label>
 
 									<div class="controls">
-										<input id="citta" placeholder="Roma" type="text">
+										<input name="citta" id="citta" placeholder="Roma" type="text">
 									</div>
 								</div>
 								<div class="control-group">

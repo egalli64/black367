@@ -1,28 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="UTF-8">
 <title>Accedi o registrati</title>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-	crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-	integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-	crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-	integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-	crossorigin="anonymous"></script>
-
-<!--	<script type="text/javascript" src="js/login.js" defer></script>	 -->
-
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
 <style type="text/css">
 @import
@@ -32,141 +18,136 @@
 @import url(./css/login.css);
 </style>
 </head>
+
 <body>
 	<%@ include file="header.html"%>
-
 	<div class="container-fluid top">
-		<div class="row">
-			<div class="col-1"></div>
-
-			<div class="col" id="login-container">
-				<form id="login" class="needs-validation" action="/black367/login"> <!--  novalidate ?! -->
-				<!-- target="_self" -->
-					<div class="form-row">
-						<div class="col">
-							<h2 id="autentication">ACCEDI</h2>
-							<label for="usr" class="labels">Username</label> <input type="text"
-								class="form-control" id="usr" placeholder="Username" name="user" required>
-							<div class="invalid-feedback">Per favore, inserire uno username.</div>
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="col">
-							<label for="psw" class="labels">Password</label> <input type="password" id="psw"
-								class="form-control" name="password" aria-describedby="passwordHelpBlock"
-								placeholder="Password" required>
-							<div class="invalid-feedback">Inserire una password valida.</div>
-							<small id="passwordHelpBlock" class="form-text text-muted"> La password
-								deve essere lunga almeno 8 caratteri, contenere almeno un numero, un carattere
-								minuscolo e un carattere maiuscolo. </small>
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="col">
-							<!--                            <div class="custom-control custom-switch">
-                                	<input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                	<label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
-                              	</div>
--->
-							<br> <small class="form-text text-muted"> Si vuole effettuare
-								l'accesso come amministratori del sito? <span> <input type="checkbox"
-									id="check-admin" value="Si"> <label for="check-admin"
-									id="check-admin-label" class="labels">Si</label>
-							</span>
-							</small>
-						</div>
-					</div>
-
-					<button class="btn btn-primary" type="submit">LOGIN</button>
-				</form>
-			</div>
-
-			<div class="col" id="registration-container">
-				<form id="registration" class="needs-validation" action="/black367/index_bis.jps"
-					target="_self" novalidate>
-					<div class="form-row">
-						<div class="col">
-							<h2 id="autentication">REGISTRATI</h2>
-							<label for="nome" class="labels">Nome</label> <input type="text"
-								class="form-control" id="nome" placeholder="Nome" required>
-							<div class="invalid-feedback">Campo necessario</div>
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="col">
-							<label for="cognome" class="labels">Cognome</label> <input type="text"
-								class="form-control" id="cognome" placeholder="Cognome" required>
-							<div class="invalid-feedback">Campo necessario</div>
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="col">
-							<label for="data" class="labels">Data di nascita</label> <input type="date"
-								class="form-control" id="data" placeholder="03/12/1993" required>
-							<div class="invalid-feedback">Campo necessario</div>
-						</div>
-						<div class="col" id="sesso-div">
-							<label for="sesso" class="labels">Sesso</label>
-							<div id="sesso">
-								<input type="radio" name="sesso" id="sesso-m" required> <label
-									for="sesso-m" class="labels">M</label> <input type="radio" name="sesso"
-									id="sesso-f" required> <label for="sesso-f" class="labels">F</label>
+		<div class="row-fluid">
+		
+		<div class="col">
+			<div class="span12">
+				<div class="span6">
+					<div class="area">
+						<form class="form-horizontal" action="/black367/login">
+							<div class="heading">
+								<h4 class="form-heading">Accedi</h4>
 							</div>
-						</div>
+
+							<div class="control-group">
+								<label class="control-label" for="inputUsername">Username</label>
+
+								<div class="controls">
+									<input id="inputUsername" placeholder="Username" type="text">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label" for="inputPassword">Password</label>
+
+								<div class="controls">
+									<input id="inputPassword" placeholder="Password" type="password">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<div class="controls">
+									<label class="checkbox"><input type="checkbox"> Si vuole effettuare
+										l'accesso come amministratori del sito? </label>
+									<button class="btn btn-success" type="submit">Accedi</button>
+								</div>
+							</div>
+							<c:if test="${wrongAccess != null and wrongAccess==true}">
+								<div class="alert alert-error">
+									<button class="close" data-dismiss="alert" type="button">×</button>
+									<strong>Accesso negato!</strong> Perfavore inserisci le credenziali corrette.
+								</div>
+							</c:if>
+						</form>
 					</div>
-					<div class="form-row">
-						<div class="col">
-							<label for="indirizzo" class="labels">Indirizzo</label> <input type="text"
-								class="form-control" id="indirizzo" placeholder="Via Roma 1" required>
-							<div class="invalid-feedback">Campo necessario</div>
-						</div>
-						<div class="col">
-							<label for="cap" class="labels">CAP</label> <input type="text" class="form-control"
-								id="cap" placeholder="40100" required>
-							<div class="invalid-feedback">Campo necessario</div>
-						</div>
-						<div class="col">
-							<label for="citta" class="labels">Città</label> <input type="text"
-								class="form-control" id="citta" placeholder="Bologna" required>
-							<div class="invalid-feedback">Campo necessario</div>
-						</div>
-					</div>
-					<div class="form-row">
-						<!--    inserire form control per email     -->
-						<div class="col">
-							<label for="email" class="labels">E-mail</label> <input type="email"
-								class="form-control" id="email" placeholder="mario.rossi@gmail.com" required>
-							<div class="invalid-feedback">Inserire una email valida.</div>
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="col">
-							<label for="usr-reg" class="labels">Username</label> <input type="text"
-								class="form-control" id="usr-reg" placeholder="Username" required>
-							<div class="invalid-feedback">Per favore, inserire uno username.</div>
-						</div>
-					</div>
-					<div class="form-row">
-						<div class="col">
-							<label for="psw-reg" class="labels">Password</label> <input type="password"
-								id="psw-reg" class="form-control" aria-describedby="passwordHelpBlock"
-								placeholder="Password" required>
-							<div class="invalid-feedback">Inserire una password valida.</div>
-							<small id="passwordHelpBlock" class="form-text text-muted"> La password
-								deve essere lunga almeno 8 caratteri, contenere almeno un numero, un carattere
-								minuscolo e un carattere maiuscolo. </small>
-						</div>
-					</div>
+				</div>
+
+				<div class="span6">
+					<div class="area">
+						<form class="form-horizontal">
+							<div class="heading">
+								<h4 id="form-heading">Non sei ancora registrato?</h4>
+							</div>
 
 
-					<button class="btn btn-primary" type="submit">REGISTRATI</button>
-				</form>
+							<div class="control-group">
+								<label class="control-label" for="inputFirst">Nome</label>
+
+								<div class="controls">
+									<input id="inputFirst" placeholder="Mario" type="text">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label" for="inputLast">Cognome</label>
+
+								<div class="controls">
+									<input id="inputLast" placeholder="Rossi" type="text">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label" for="citta">Città</label>
+
+								<div class="controls">
+									<input id="citta" placeholder="Roma" type="text">
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="sesso">Sesso</label>
+								<div class="controls">
+									<input type="radio" name="sesso" id="sesso-m" required> <label for="sesso-m"
+										class="labels">M</label> <input type="radio" name="sesso" id="sesso-f" required> <label
+										for="sesso-f" class="labels">F</label>
+								</div>
+							</div>
+
+
+
+							<div class="control-group">
+								<label class="control-label" for="inputEmail">Email</label>
+
+								<div class="controls">
+									<input id="inputEmail" placeholder="esempioh@gmail.com" type="text">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label" for="inputUser">Username</label>
+
+								<div class="controls">
+									<input id="inputUser" placeholder="username" type="text">
+								</div>
+							</div>
+
+							<div class="control-group">
+								<label class="control-label" for="inputPassword">Password</label>
+
+								<div class="controls">
+									<input id="inputPassword" placeholder="Min. 8 Caratteri" type="password"> <small
+										id="passwordHelpBlock" class="form-text text-muted"> La password deve essere lunga
+										almeno 8 caratteri, contenere almeno un numero, un carattere minuscolo e un carattere
+										maiuscolo. </small>
+								</div>
+							</div>
+
+							<div class="control-group">
+								<div class="controls">
+
+									<button class="btn btn-success" type="submit">Registrati</button>
+
+								</div>
+							</div>
+
+						</form>
+						</div>
+					</div>
+				</div>
 			</div>
-
-			<div class="col-1"></div>
 		</div>
 	</div>
-
-
 </body>
-</html>

@@ -18,7 +18,7 @@ import org.slf4j.LoggerFactory;
 
 
 
-@WebFilter(urlPatterns = { "/registration" })
+@WebFilter(urlPatterns = { "/prenotazioni.jsp" })
 public class FilterPrenotazioni implements Filter {
 	private static final Logger LOG = LoggerFactory.getLogger(FilterPrenotazioni.class);
 
@@ -37,14 +37,14 @@ public class FilterPrenotazioni implements Filter {
 
                 //session.setAttribute("logged", false);
             } catch (Exception ex) {
-                LOG.warn(ex.getMessage());
+                LOG.error(ex.getMessage());
             }
 
-            LOG.info("Access to area PRENOTAZIONI " + logged);
+            LOG.info("Access to area PRENOTAZIONI: " + logged);
             if (!logged) {
                 HttpServletResponse hsResponse = (HttpServletResponse) response;
                 LOG.info("Redirecting to login area");
-                hsResponse.sendRedirect("/login.jsp");
+                hsResponse.sendRedirect("/black367/login.jsp");
                 return;
             }
         }

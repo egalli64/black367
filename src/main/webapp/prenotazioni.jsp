@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<%@ include file="header.html"%>
+
 This page is still empty...
 
 </body>

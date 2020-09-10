@@ -49,7 +49,7 @@ public class Login extends HttpServlet {
 					LOG.info("Credenziali inserite NON corrette");
 					boolean wrongAccess = true;
 					request.setAttribute("wrongAccess", wrongAccess);	// in login.jsp se la request ha come parametro wrongAccess == true => esce un alert di errore
-					RequestDispatcher rd = request.getRequestDispatcher("/login.jsp");
+					RequestDispatcher rd = request.getRequestDispatcher("/login2.jsp");
 					rd.forward(request, response);
 				}
 		} catch (Exception e) {

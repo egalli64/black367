@@ -28,8 +28,8 @@ public class UserDAO implements AutoCloseable {
 	public String verify(String username, String password) {
 		LOG.trace("called");
 		try (Statement stmt = conn.createStatement(); //
-				ResultSet rs = stmt.executeQuery("SELECT user_name, user_password FROM users WHERE user_name = "
-						+ username + " AND user_password = " + password)) {
+				ResultSet rs = stmt.executeQuery("SELECT user_name, user_password FROM users WHERE user_name = '"
+						+ username + "' AND user_password = '" + password + "'")) {
 			if (rs.next()) {
 				return rs.getString("user_name");
 			} 

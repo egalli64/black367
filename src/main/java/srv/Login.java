@@ -35,17 +35,28 @@ public class Login extends HttpServlet {
 
 		try (UserDAO dao = new UserDAO(ds)) {
 
-			if (dao.verify(user, password) != null) {
+			if (dao.userExists(user)) {
 				LOG.info("User " + user + " IS in the database");
-				request.setAttribute("user", user);
-				HttpSession session = request.getSession();
-				session.setAttribute("user", user);
-				session.setAttribute("logged", true);
+				if (dao.verify(user, password) != null) {
+					LOG.info("Provided password IS correct");
+					request.setAttribute("user", user);
+					HttpSession session = request.getSession();
+					session.setAttribute("user", user);
+					session.setAttribute("logged", true);
 //				LocalTime start = (LocalTime) session.getAttribute("start");
-				RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
-				rd.forward(request, response);
+					RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
+					rd.forward(request, response);
+				} else {
+					LOG.info("Provided password is NOT correct");
+					boolean wrongPsw = true;
+					request.setAttribute("wrongPsw", wrongPsw);	//
+					RequestDispatcher rd = request.getRequestDispatcher("/login.jsp");
+					rd.forward(request, response);
+				}
 			} else {
 				LOG.info("User " + user + " is NOT in the database");
+				boolean wrongUser = true;
+				request.setAttribute("wrongUser", wrongUser);
 				RequestDispatcher rd = request.getRequestDispatcher("/login.jsp");
 				rd.forward(request, response);
 			}

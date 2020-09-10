@@ -25,6 +25,21 @@ public class UserDAO implements AutoCloseable {
 		}
 	}
 
+	public boolean userExists(String username) {
+		LOG.trace("called");
+		try (Statement stmt = conn.createStatement(); //
+				ResultSet rs = stmt.executeQuery("SELECT user_name FROM users WHERE user_name = '" + username + "'")) {
+			if (rs.next()) {
+				return true;
+			} 
+			else {
+				return false;
+			}
+		} catch (SQLException se) {
+			throw new IllegalStateException("Database issue " + se.getMessage());
+		}
+	}
+	
 	public User verify(String username, String password) {
 		LOG.trace("called");
 		try (Statement stmt = conn.createStatement(); //
@@ -41,6 +56,10 @@ public class UserDAO implements AutoCloseable {
 			throw new IllegalStateException("Database issue " + se.getMessage());
 		}
 	}
+	
+//	public boolean insertUser() {
+//		
+//	}
 
 	@Override
 	public void close() throws Exception {

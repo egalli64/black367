@@ -83,6 +83,7 @@
 					<c:when test="${logged != null and logged == true}">
 						<div id="box-logout">
 							<p>Ciao ${user}! Benvenuto nella tua area personale!</p>
+							<a href="prenotazioni.jsp"><button class="btn btn-primary" type="button">PRENOTAZIONI</button></a>
 							<a href="logout"><button class="btn btn-primary" type="button"
 									action="/black367/logout">LOGOUT</button></a>
 						</div>

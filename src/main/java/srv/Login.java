@@ -24,7 +24,7 @@ public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private static final Logger LOG = LoggerFactory.getLogger(Login.class);
 
-	@Resource(name = "jdbc/me")
+	@Resource(name = "jdbc/black")
 	private DataSource ds;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)

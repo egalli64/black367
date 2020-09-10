@@ -17,6 +17,14 @@ public class User {
 		return firstName;
 	}
 
+	public LocalDate getBirth() {
+		return birth;
+	}
+
+	public void setBirth(LocalDate birth) {
+		this.birth = birth;
+	}
+
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}

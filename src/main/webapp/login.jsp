@@ -144,7 +144,15 @@
 											carattere maiuscolo. </small>
 									</div>
 								</div>
-
+								
+								<c:if test="${userAlreadyExists != null and userAlreadyExists == true}">
+									<div class="alert alert-error">
+										
+										<strong>ATTENZIONE!</strong> Lo username selezionato non è disponibile poiché già in uso.
+										<p> Per favore, scegliere uno username diverso</p>
+									</div>
+								</c:if>
+								
 								<div class="control-group">
 									<div class="controls">
 

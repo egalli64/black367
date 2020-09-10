@@ -6,6 +6,7 @@
 <head>
 <title>Accedi o registrati</title>
 
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
 
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -37,7 +38,7 @@
 									<label class="control-label" for="inputUsername">Username</label>
 
 									<div class="controls">
-										<input name="user" id="inputUsername" placeholder="Username" type="text">
+										<input name="user" id="inputUsername" placeholder="Username" value= "${user}" type="text">
 									</div>
 								</div>
 
@@ -58,7 +59,7 @@
 								</div>
 								<c:if test="${wrongAccess != null and wrongAccess==true}">
 									<div class="alert alert-error">
-										<button class="close" data-dismiss="alert" type="button">×</button>
+										
 										<strong>Accesso negato!</strong> Perfavore inserisci le credenziali corrette.
 									</div>
 								</c:if>

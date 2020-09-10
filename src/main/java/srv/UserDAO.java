@@ -1,6 +1,7 @@
 package srv;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -57,9 +58,20 @@ public class UserDAO implements AutoCloseable {
 		}
 	}
 	
-//	public boolean insertUser() {
-//		
-//	}
+	
+//	prima di inserire l'utente nella servlet di registrazione usare userExists
+	public void insertUser(User user) {
+		LOG.trace("called");
+		Date date = Date.valueOf(user.getBirth()); 
+		try (Statement stmt = conn.createStatement(); //
+				ResultSet rs = stmt.executeQuery("INSERT INTO users (user_name, user_password, first_name, last_name, email, birth_date, gender, city) VALUES(" 
+		+ user.getUsername() + ", " + user.getPassword() + ", " + user.getFirstName() + ", " + user.getLastName() +
+		", " + user.getMail() + ", " + date + ", " + user.getGender() + ", " + user.getCity())) {
+			
+		} catch (SQLException se) {
+			throw new IllegalStateException("Database issue " + se.getMessage());
+		}
+	}
 
 	@Override
 	public void close() throws Exception {

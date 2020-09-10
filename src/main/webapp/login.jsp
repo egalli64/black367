@@ -69,7 +69,7 @@
 
 					<div class="span6">
 						<div class="area">
-							<form class="form-horizontal">
+							<form class="form-horizontal" action="/black367/registration">
 								<div class="heading">
 									<h4 id="form-heading">Non sei ancora registrato?</h4>
 								</div>

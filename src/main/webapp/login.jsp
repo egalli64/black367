@@ -110,8 +110,8 @@
 								<div class="control-group">
 									<label class="control-label" for="sesso">Sesso</label>
 									<div class="controls">
-										<input type="radio" name="sesso" id="sesso-m" required> <label for="sesso-m"
-											class="labels">M</label> <input type="radio" name="sesso" id="sesso-f" required>
+										<input type="radio" name="sesso" id="sesso-m" value="M" required> <label for="sesso-m"
+											class="labels">M</label> <input type="radio" name="sesso" id="sesso-f" value="F" required>
 										<label for="sesso-f" class="labels">F</label>
 									</div>
 								</div>

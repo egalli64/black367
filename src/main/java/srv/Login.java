@@ -31,14 +31,13 @@ public class Login extends HttpServlet {
 			throws ServletException, IOException {
 
 		String user = request.getParameter("user");
+		request.setAttribute("user", user);
 		String password = request.getParameter("password");
 
 		try (UserDAO dao = new UserDAO(ds)) {
 
-			if (dao.userExists(user)) {
-				LOG.info("User " + user + " IS in the database");
 				if (dao.verify(user, password) != null) {
-					LOG.info("Provided password IS correct");
+					LOG.info("Credenziali corrette: benvenuto " + user);
 					request.setAttribute("user", user);
 					HttpSession session = request.getSession();
 					session.setAttribute("user", user);
@@ -47,19 +46,12 @@ public class Login extends HttpServlet {
 					RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
 					rd.forward(request, response);
 				} else {
-					LOG.info("Provided password is NOT correct");
-					boolean wrongPsw = true;
-					request.setAttribute("wrongPsw", wrongPsw);	//
+					LOG.info("Credenziali inserite NON corrette");
+					boolean wrongAccess = true;
+					request.setAttribute("wrongAccess", wrongAccess);	// in login.jsp se la request ha come parametro wrongAccess == true => esce un alert di errore
 					RequestDispatcher rd = request.getRequestDispatcher("/login.jsp");
 					rd.forward(request, response);
 				}
-			} else {
-				LOG.info("User " + user + " is NOT in the database");
-				boolean wrongUser = true;
-				request.setAttribute("wrongUser", wrongUser);
-				RequestDispatcher rd = request.getRequestDispatcher("/login.jsp");
-				rd.forward(request, response);
-			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

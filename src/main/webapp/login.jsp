@@ -37,7 +37,7 @@
 									<label class="control-label" for="inputUsername">Username</label>
 
 									<div class="controls">
-										<input id="inputUsername" placeholder="Username" type="text">
+										<input name="user" id="inputUsername" placeholder="Username" type="text">
 									</div>
 								</div>
 
@@ -45,7 +45,7 @@
 									<label class="control-label" for="inputPassword">Password</label>
 
 									<div class="controls">
-										<input id="inputPassword" placeholder="Password" type="password">
+										<input name="password" id="inputPassword" placeholder="Password" type="password">
 									</div>
 								</div>
 
@@ -78,7 +78,7 @@
 									<label class="control-label" for="inputFirst">Nome</label>
 
 									<div class="controls">
-										<input id="inputFirst" placeholder="Mario" type="text">
+										<input name="nome" id="inputFirst" placeholder="Mario" type="text">
 									</div>
 								</div>
 
@@ -86,7 +86,7 @@
 									<label class="control-label" for="inputLast">Cognome</label>
 
 									<div class="controls">
-										<input id="inputLast" placeholder="Rossi" type="text">
+										<input name="cognome" id="inputLast" placeholder="Rossi" type="text">
 									</div>
 								</div>
 								
@@ -94,7 +94,7 @@
 									<label class="control-label" for="data">Data di nascita</label>
 
 									<div class="controls">
-										<input type="date" id="data" placeholder="03/12/1993" type="text">
+										<input name="data" type="date" id="data" placeholder="03/12/1993" type="text">
 									</div>
 								</div>
 								
@@ -121,7 +121,7 @@
 									<label class="control-label" for="inputEmail">Email</label>
 
 									<div class="controls">
-										<input id="inputEmail" placeholder="esempioh@gmail.com" type="text">
+										<input name="email" id="inputEmail" placeholder="esempioh@gmail.com" type="text">
 									</div>
 								</div>
 
@@ -129,7 +129,7 @@
 									<label class="control-label" for="inputUser">Username</label>
 
 									<div class="controls">
-										<input id="inputUser" placeholder="username" type="text">
+										<input name="usr_reg" id="inputUser" placeholder="username" type="text">
 									</div>
 								</div>
 
@@ -137,7 +137,7 @@
 									<label class="control-label" for="inputPassword">Password</label>
 
 									<div class="controls">
-										<input id="inputPassword" placeholder="Min. 8 Caratteri" type="password"> <small
+										<input name="psw_reg" id="inputPassword" placeholder="Min. 8 Caratteri" type="password"> <small
 											id="passwordHelpBlock" class="form-text text-muted"> La password deve essere
 											lunga almeno 8 caratteri, contenere almeno un numero, un carattere minuscolo e un
 											carattere maiuscolo. </small>

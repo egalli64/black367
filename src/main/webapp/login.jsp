@@ -37,7 +37,7 @@
 									<label class="control-label" for="inputUsername">Username</label>
 
 									<div class="controls">
-										<input name="user" id="inputUsername" placeholder="Username" type="text">
+										<input name="user" id="inputUsername" placeholder="Username" value= "${user}" type="text">
 									</div>
 								</div>
 
@@ -58,7 +58,7 @@
 								</div>
 								<c:if test="${wrongAccess != null and wrongAccess==true}">
 									<div class="alert alert-error">
-										<button class="close" data-dismiss="alert" type="button">×</button>
+										
 										<strong>Accesso negato!</strong> Perfavore inserisci le credenziali corrette.
 									</div>
 								</c:if>

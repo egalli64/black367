@@ -1,18 +1,66 @@
 package srv;
 
+import java.time.LocalDate;
+
 public class User {
 	private int id;
-	private String name;
+	private String username;
 	private String password;
+	private String firstName;
+	private String lastName;
+	private LocalDate birth;
+	private char gender;
+	private String city;
+	private String mail;
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public char getGender() {
+		return gender;
+	}
+
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
 
 	public User() {
 
 	}
 
-	public User(int id, String name, String password) {
+	public User(int id, String username, String password) {
 		super();
 		this.id = id;
-		this.name = name;
+		this.username = username;
 		this.password = password;
 	}
 
@@ -24,12 +72,12 @@ public class User {
 		this.id = id;
 	}
 
-	public String getName() {
-		return name;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -41,7 +89,7 @@ public class User {
 	}
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", password=" + password + "]";
+		return "User [id=" + id + ", username=" + username + ", password=" + password + "]";
 	}
 
 }

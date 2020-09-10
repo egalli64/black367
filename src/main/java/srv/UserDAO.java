@@ -11,7 +11,6 @@ import javax.sql.DataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 public class UserDAO implements AutoCloseable {
 	private static final Logger LOG = LoggerFactory.getLogger(UserDAO.class);
 	private Connection conn;
@@ -32,44 +31,54 @@ public class UserDAO implements AutoCloseable {
 				ResultSet rs = stmt.executeQuery("SELECT user_name FROM users WHERE user_name = '" + username + "'")) {
 			if (rs.next()) {
 				return true;
-			} 
-			else {
+			} else {
 				return false;
 			}
 		} catch (SQLException se) {
 			throw new IllegalStateException("Database issue " + se.getMessage());
 		}
 	}
-	
+
 	public User verify(String username, String password) {
 		LOG.trace("called");
 		try (Statement stmt = conn.createStatement(); //
-				ResultSet rs = stmt.executeQuery("SELECT user_id, user_name, user_password FROM users WHERE user_name = '"
-						+ username + "' AND user_password = '" + password + "'")) {
+				ResultSet rs = stmt
+						.executeQuery("SELECT user_id, user_name, user_password FROM users WHERE user_name = '"
+								+ username + "' AND user_password = '" + password + "'")) {
 			if (rs.next()) {
 				return new User(rs.getInt("user_id"), rs.getString("user_name"), rs.getString("user_password"));
 //				return rs.getString("user_name");
-			} 
-			else {
+			} else {
 				return null;
 			}
 		} catch (SQLException se) {
 			throw new IllegalStateException("Database issue " + se.getMessage());
 		}
 	}
-	
-	
+
 //	prima di inserire l'utente nella servlet di registrazione usare userExists
 	public void insertUser(User user) {
 		LOG.trace("called");
-		Date date = Date.valueOf(user.getBirth()); 
-		try (Statement stmt = conn.createStatement(); //
-				ResultSet rs = stmt.executeQuery("INSERT INTO users (user_name, user_password, first_name, last_name, email, birth_date, gender, city) VALUES(" 
-		+ user.getUsername() + ", " + user.getPassword() + ", " + user.getFirstName() + ", " + user.getLastName() +
-		", " + user.getMail() + ", " + date + ", " + user.getGender() + ", " + user.getCity())) {
+		Date date = Date.valueOf(user.getBirth());
+
+		System.out.println("INSERT INTO users (user_name, user_password, first_name, last_name, email, birth_date, gender, city) VALUES('"
+							+ "'" + user.getUsername() + "', '" + user.getPassword() + "', '" + user.getFirstName() + "', '"
+							+ user.getLastName() + "', '" + user.getMail() + "', '" + date + "', '" + user.getGender() + "', '"
+							+ user.getCity() + "'");
+		Statement stmt;
+		try {
+			stmt = conn.createStatement();
+			stmt.executeUpdate(
+					"INSERT INTO users (user_name, user_password, first_name, last_name, email, birth_date, gender, city) VALUES('"
+							+ user.getUsername() + "', '" + user.getPassword() + "', '" + user.getFirstName() + "', '"
+							+ user.getLastName() + "', '" + user.getMail() + "', '" + date + "', '" + user.getGender() + "', '"
+							+ user.getCity() + "')");
 			
-		} catch (SQLException se) {
-			throw new IllegalStateException("Database issue " + se.getMessage());
+			
+			stmt.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 

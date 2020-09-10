@@ -42,7 +42,7 @@ public class Login extends HttpServlet {
 				session.setAttribute("user", user);
 				session.setAttribute("logged", true);
 //				LocalTime start = (LocalTime) session.getAttribute("start");
-				RequestDispatcher rd = request.getRequestDispatcher("/index_bis.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/index.jsp");
 				rd.forward(request, response);
 			} else {
 				LOG.info("User " + user + " is NOT in the database");

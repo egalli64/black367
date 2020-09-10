@@ -94,7 +94,7 @@
 									<label class="control-label" for="data">Data di nascita</label>
 
 									<div class="controls">
-										<input name="data" type="date" id="data" placeholder="03/12/1993" type="text">
+										<input name="data" type="date" id="data" placeholder="03/12/1993" >
 									</div>
 								</div>
 								

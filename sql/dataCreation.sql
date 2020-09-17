@@ -32,14 +32,12 @@ create table hospitals(
     hospital_city varchar (20)
     );
     
-insert into hospitals(hospital_id,hospital_name,hospital_address,hospital_cap,hospital_city) values('100', 'Ospedale Sacco', 'Piazza Leonardo', 20100, 'Milano');
-insert into hospitals(hospital_id,hospital_name,hospital_address,hospital_cap,hospital_city) values('101', 'Ospedale Niguarda', 'Piazza Piola', 20100, 'Milano');
-insert into hospitals(hospital_id,hospital_name,hospital_address,hospital_cap,hospital_city) values('102', 'Ospedale San Raffaele', 'Cascina Gobba', 20100, 'Milano');
+insert into hospitals(hospital_id,hospital_name,hospital_address,hospital_cap,hospital_city) values('100', 'Ospedale delle Apuane', 'Piazza Leonardo', 20100, 'Massa-Carrara');
+insert into hospitals(hospital_id,hospital_name,hospital_address,hospital_cap,hospital_city) values('101', 'Ospedale San Luca', 'Piazza Piola', 20100, 'Lucca');
+insert into hospitals(hospital_id,hospital_name,hospital_address,hospital_cap,hospital_city) values('102', 'Azienda Ospedaliera Universitaria Pisana', 'Cascina Gobba', 20100, 'Pisa');
+insert into hospitals(hospital_id,hospital_name,hospital_address,hospital_cap,hospital_city) values('103', 'Ospedali Riuniti Livorno', 'Via Piave', 20100, 'Livorno');
 
 commit;
-
-
-    
 
 create table exams(
 	exam_id integer primary key auto_increment,
@@ -93,9 +91,6 @@ insert into times(time_id,time_real) values ('3','12:30');
 
     
 commit;
-
-
-
 
 create table bookings(
 	booking_id integer primary key auto_increment,

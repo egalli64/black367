@@ -31,7 +31,7 @@
 <body>
 
 	<%@include file="header.html"%>
-	<form action="/black367/listaEsami">
+	
 		<div>
 			<div class="container-fluid">
 				<h1>Ospedali Toscana Nord-Ovest</h1>
@@ -63,7 +63,7 @@
 				<img src="pictures/ospedaleapuane.jpg" width="60%">
 				<div>
 				
-					<button class="btn btn-success" type="submit" name="Ospedale delle Apuane">Vedi gli esami prenotabili</button>
+					<a href="/black367/listaEsami?=100"> <button class="btn btn-success"  name="Ospedale delle Apuane">Vedi gli esami prenotabili</button></a>
 				</div>
 			</div>
 		</div>
@@ -329,7 +329,7 @@
 		</div>
 		<a href="index.html">Torna alla Home</a>
 		
-	</form>
+
 
 </body>
 

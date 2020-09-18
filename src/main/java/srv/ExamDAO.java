@@ -50,7 +50,7 @@ public class ExamDAO implements AutoCloseable {
 		try (Statement stmt = conn.createStatement(); //
 				ResultSet rs = stmt.executeQuery("select distinct e.exam_id, e.exam_name, e.exam_department"
 						+ " from exams e join exam_hospitals eh on (e.exam_id) join hospitals h on (h.hospital_id)"
-						+ " where hospital_id = '" + hospitalID + "'")) {
+						+ " where hospital_id = " + hospitalID  )) {
 			List<Exam> examsList = new ArrayList<Exam>();
 			while (rs.next()) {
 				Exam exam = new Exam();

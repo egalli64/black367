@@ -6,11 +6,10 @@ public class Hospital {
 	private String address;
 	private int cap;
 	private String city;
+	
 	public int getId() {
 		return id;
 	}
-	
-	
 	
 	public void setId(int id) {
 		this.id = id;

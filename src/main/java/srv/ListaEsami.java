@@ -31,14 +31,15 @@ public class ListaEsami extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String hospitalName = request.getParameter("hospitalName");
-		request.setAttribute("hospitalName", hospitalName);
+		String hospitalIdString = request.getParameter("name");
+		int hospitalId = Integer.parseInt(hospitalIdString);
+		request.setAttribute("hospitalName", hospitalId);
 
 		try (ExamDAO dao = new ExamDAO(ds)) {
 			
-			LOG.info("Tentativo di creare lista esami per Ospedale " + hospitalName);
+			LOG.info("Tentativo di creare lista esami per Ospedale " + hospitalId);
 			List<Exam> examsList = new ArrayList<Exam>();
-			examsList = dao.getExams(hospitalName);
+			examsList = dao.getExams(hospitalId);
 			
 			request.setAttribute("examsList", examsList);
 			HttpSession session = request.getSession();

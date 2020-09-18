@@ -4,7 +4,7 @@ public class Hospital {
 	private int id;
 	private String name;
 	private String address;
-	private int cap;
+	private String cap;
 	private String city;
 	
 	public int getId() {
@@ -26,10 +26,10 @@ public class Hospital {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public int getCap() {
+	public String getCap() {
 		return cap;
 	}
-	public void setCap(int cap) {
+	public void setCap(String cap) {
 		this.cap = cap;
 	}
 	public String getCity() {

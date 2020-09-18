@@ -54,13 +54,30 @@ insert into exams(exam_id,exam_name,exam_department) values (1,'Pulizia dentale'
 insert into exams(exam_id,exam_name,exam_department) values (2,'Estrazione dente','Odontoiatria'); 
 insert into exams(exam_id,exam_name,exam_department) values (3,'Rimozione carie','Odontoiatria'); 
 insert into exams(exam_id,exam_name,exam_department) values (4,'Controllo nei','Dermatologia'); 
+insert into exams(exam_name,exam_department) values
+('ECG', 'Cardiologia'),
+('Appendicetmoia', 'Chirurgia generale'),
+('Visita ginecologica', 'Ginecologia e Ostetricia'),
+('PAP Test', 'Ginecologia e Ostetricia'),
+('Inserimento stent', 'Chirurgia vascolare'),
+('Visita oculistica', 'Oculistica'),
+('Rimozione gesso', 'Ortopedia'),
+('Lastra', 'Radiologia'),
+('Tac', 'Radiologia'),
+('Risonanza', 'Radiologia'),
+('Visita psichiatrica', 'Psichiatria'),
+('Controllo respirazione', 'Pneumologia'),
+('Endoscopia', 'Gastroentrologia'),
+('Visita di controllo', 'Endocrinologia'),
+('Ecografia ai reni', 'Reumatologia');
+
 
 commit;
 
 -- spostare primary key 
 
 create table exam_hospitals(
-	exam_hospital_id integer,
+	exam_hospital_id integer auto_increment,
     exam_id integer,
     hospital_id integer,
     
@@ -82,7 +99,11 @@ insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(9,100,3)
 insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(10,101,3);
 insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(11,102,3);
 insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(12,102,4);
-
+insert into exam_hospitals(hospital_id,exam_id) values
+(100, 18),
+(101, 14),
+(102, 6),
+(103, 9);
 commit;
 
 create table times(

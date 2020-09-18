@@ -1,6 +1,11 @@
 -- create tables and populate them for BLACK
 use black;
 
+drop table if exists bookings;
+drop table if exists times;
+drop table if exists exam_hospitals;
+drop table if exists exams;
+drop table if exists hospitals;
 drop table if exists users;
 
 create table users(
@@ -55,28 +60,28 @@ commit;
 -- spostare primary key 
 
 create table exam_hospitals(
-	exam_id integer,
-	coupled_id integer,
+	exam_hospital_id integer,
+    exam_id integer,
     hospital_id integer,
     
-	constraint exam_hospital_pk primary key(coupled_id),
+	constraint exam_hospital_pk primary key(exam_hospital_id),
     constraint examhospital_fk foreign key (hospital_id) references hospitals(hospital_id),
 	constraint exam_hospital_fk foreign key (exam_id) references exams(exam_id)
  
 );
 
-insert into exam_hospitals(coupled_id,hospital_id,exam_id) values(1,100,1);
-insert into exam_hospitals(coupled_id,hospital_id,exam_id) values(2,101,1);
-insert into exam_hospitals(coupled_id,hospital_id,exam_id) values(3,102,1);
-insert into exam_hospitals(coupled_id,hospital_id,exam_id) values(4,100,4);
-insert into exam_hospitals(coupled_id,hospital_id,exam_id) values(5,100,2);
-insert into exam_hospitals(coupled_id,hospital_id,exam_id) values(6,101,2);
-insert into exam_hospitals(coupled_id,hospital_id,exam_id) values(7,102,2);
-insert into exam_hospitals(coupled_id,hospital_id,exam_id) values(8,101,4);
-insert into exam_hospitals(coupled_id,hospital_id,exam_id) values(9,100,3);
-insert into exam_hospitals(coupled_id,hospital_id,exam_id) values(10,101,3);
-insert into exam_hospitals(coupled_id,hospital_id,exam_id) values(11,102,3);
-insert into exam_hospitals(coupled_id,hospital_id,exam_id) values(12,102,4);
+insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(1,100,1);
+insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(2,101,1);
+insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(3,102,1);
+insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(4,100,4);
+insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(5,100,2);
+insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(6,101,2);
+insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(7,102,2);
+insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(8,101,4);
+insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(9,100,3);
+insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(10,101,3);
+insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(11,102,3);
+insert into exam_hospitals(exam_hospital_id,hospital_id,exam_id) values(12,102,4);
 
 commit;
 
@@ -95,21 +100,22 @@ commit;
 create table bookings(
 	booking_id integer primary key auto_increment,
     user_id integer,
-	coupled_id integer,
+	exam_hospital_id integer,
     booking_date DATE,
     time_id integer,
     price varchar(10),
 		
-        constraint booking_coupled_id_fk foreign key (coupled_id) references exam_hospitals(coupled_id),
+        constraint booking_exam_hospital_id_fk foreign key (exam_hospital_id) references exam_hospitals(exam_hospital_id),
         constraint bookings_user_id_fk foreign key(user_id) references users(user_id),
         constraint bookings_time_id_fk foreign key(time_id) references times(time_id),
-        constraint booking_uq unique(user_id, coupled_id,booking_date,time_id),
-        constraint exam_uq unique(coupled_id,booking_date,time_id),
-        constraint patientexam_uq unique(user_id,booking_date,time_id)
+        
+        constraint booking_uq unique(user_id, exam_hospital_id, booking_date, time_id),
+        constraint exam_uq unique(exam_hospital_id, booking_date, time_id),
+        constraint patientexam_uq unique(user_id, booking_date, time_id)
 );
 
-insert into bookings(booking_id,user_id,coupled_id,booking_date,time_id,price) values ('1', '2',1,'2020-10-10','1','100€');
-insert into bookings(booking_id,user_id,coupled_id,booking_date,time_id,price) values ('2', '4',2,'2020-10-11','2','100€');
-insert into bookings(booking_id,user_id,coupled_id,booking_date,time_id,price) values ('3', '6',3,'2020-10-12','3','100€');
+insert into bookings(booking_id,user_id,exam_hospital_id,booking_date,time_id,price) values ('1', '2',1,'2020-10-10','1','100€');
+insert into bookings(booking_id,user_id,exam_hospital_id,booking_date,time_id,price) values ('2', '4',2,'2020-10-11','2','100€');
+insert into bookings(booking_id,user_id,exam_hospital_id,booking_date,time_id,price) values ('3', '6',3,'2020-10-12','3','100€');
         
 commit;

@@ -40,6 +40,7 @@ public class ListaEsami extends HttpServlet {
 			List<Exam> examsList = new ArrayList<Exam>();
 			examsList = dao.getExams(hospitalName);
 			
+			request.setAttribute("examsList", examsList);
 			HttpSession session = request.getSession();
 			session.setAttribute("examsList", examsList);
 
